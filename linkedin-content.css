@@ -1,0 +1,103 @@
+/* LinkedIn AI Reply Button Styles */
+.linkedin-ai-reply-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.linkedin-ai-btn {
+    background: #0073b1 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    min-width: 80px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.linkedin-ai-btn:hover {
+    background: #005885 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,115,177,0.3) !important;
+}
+
+.linkedin-ai-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,115,177,0.3) !important;
+}
+
+.linkedin-ai-btn:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* LinkedIn Dropdown Styles */
+.linkedin-dropdown {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    background: white !important;
+}
+
+.linkedin-tone-option {
+    color: #333 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    transition: background-color 0.2s ease !important;
+    border-radius: 4px !important;
+}
+
+.linkedin-tone-option:hover {
+    background-color: #f3f6f8 !important;
+    color: #0073b1 !important;
+}
+
+/* Integration with LinkedIn's message form */
+.msg-form__footer .linkedin-ai-reply-button,
+.msg-form__right-actions .linkedin-ai-reply-button {
+    margin: 0 4px;
+    order: -1; /* Place before other buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .linkedin-ai-btn {
+        font-size: 11px !important;
+        padding: 5px 10px !important;
+        min-width: 70px !important;
+        height: 26px !important;
+    }
+    
+    .linkedin-dropdown {
+        min-width: 140px !important;
+        font-size: 13px !important;
+    }
+    
+    .linkedin-tone-option {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* Animation for button state changes */
+.linkedin-ai-btn {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

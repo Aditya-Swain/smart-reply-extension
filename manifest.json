@@ -1,0 +1,37 @@
+{
+  "name": "SmartReply",
+  "description": "AI-powered email and message reply generator for Gmail and LinkedIn",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "*://mail.google.com/*",
+    "*://www.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["gmail-content.js"],
+      "matches": ["*://mail.google.com/*"],
+      "css": ["gmail-content.css"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["linkedin-content.js"],
+      "matches": ["*://www.linkedin.com/*"],
+      "css": ["linkedin-content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://mail.google.com/*", "*://www.linkedin.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SmartReply AI",
+    "default_icon": "iconn.png"
+  }
+}
