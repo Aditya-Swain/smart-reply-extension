@@ -33,5 +33,10 @@
     "default_popup": "index.html",
     "default_title": "SmartReply AI",
     "default_icon": "iconn.png"
-  }
+  },
+ "icons": {
+ "48": "icon48.png",
+  "128": "icon128.png"
+ }
+  
 }
