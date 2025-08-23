@@ -278,7 +278,7 @@ async function generateLinkedInReply(tone) {
         const messageContent = getLinkedInMessageContent();
         console.log('LinkedIn message content:', messageContent);
 
-        const response = await fetch('http://localhost:8080/api/email/generate', {
+        const response = await fetch('https://smart-reply-fastapi.onrender.com/api/email/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
